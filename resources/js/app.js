@@ -7,7 +7,8 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import VueChatScroll from 'vue-chat-scroll'
+const chatScroll = require('vue-chat-scroll')
+window.VueChatScroll = chatScroll.VueChatScroll
 Vue.use(VueChatScroll)
 
 /**

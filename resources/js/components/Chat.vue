@@ -4,7 +4,7 @@
             <h1>Chat Room</h1>
         </li>
         <ul class="list-group" v-chat-scroll>
-            <li class="list-group-item" :class="className" v-for="text in chat.message" :key="text.index">
+            <li class="list-group-item" :class="className" v-for="text in chat.message" :key="text.index" :color="warning">
                 {{ text }}
             </li>
         </ul>
