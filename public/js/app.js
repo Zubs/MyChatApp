@@ -1929,6 +1929,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1937,6 +1946,12 @@ __webpack_require__.r(__webpack_exports__);
         message: []
       }
     };
+  },
+  props: ['color'],
+  computed: {
+    className: function className() {
+      return 'list-group-item-' + this.color;
+    }
   },
   methods: {
     send: function send() {
@@ -1948,7 +1963,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    console.log("Component mounted.");
   }
 });
 
@@ -38196,11 +38211,20 @@ var render = function() {
     _vm._v(" "),
     _c(
       "ul",
-      { staticClass: "list-group" },
+      {
+        directives: [{ name: "chat-scroll", rawName: "v-chat-scroll" }],
+        staticClass: "list-group"
+      },
       _vm._l(_vm.chat.message, function(text) {
-        return _c("li", { staticClass: "list-group-item" }, [
-          _vm._v(_vm._s(text))
-        ])
+        return _c(
+          "li",
+          {
+            key: text.index,
+            staticClass: "list-group-item",
+            class: _vm.className
+          },
+          [_vm._v("\n            " + _vm._s(text) + "\n        ")]
+        )
       }),
       0
     ),
