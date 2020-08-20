@@ -38211,10 +38211,7 @@ var render = function() {
     _vm._v(" "),
     _c(
       "ul",
-      {
-        directives: [{ name: "chat-scroll", rawName: "v-chat-scroll" }],
-        staticClass: "list-group"
-      },
+      { staticClass: "list-group" },
       _vm._l(_vm.chat.message, function(text) {
         return _c(
           "li",
