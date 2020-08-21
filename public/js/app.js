@@ -38316,7 +38316,7 @@ var render = function() {
             key: text.index,
             staticClass: "list-group-item",
             class: _vm.className,
-            attrs: { color: _vm.warning }
+            attrs: { color: "warning" }
           },
           [_vm._v("\n            " + _vm._s(text) + "\n        ")]
         )
@@ -50562,8 +50562,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 var chatScroll = __webpack_require__(/*! vue-chat-scroll */ "./node_modules/vue-chat-scroll/dist/vue-chat-scroll.js");
 
-window.VueChatScroll = chatScroll.VueChatScroll;
-Vue.use(VueChatScroll);
+window.VueChatScroll = chatScroll.VueChatScroll; // Vue.use(VueChatScroll);
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -50574,7 +50574,7 @@ Vue.use(VueChatScroll);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('chat', __webpack_require__(/*! ./components/Chat.vue */ "./resources/js/components/Chat.vue")["default"]);
+Vue.component("chat", __webpack_require__(/*! ./components/Chat.vue */ "./resources/js/components/Chat.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50582,7 +50582,7 @@ Vue.component('chat', __webpack_require__(/*! ./components/Chat.vue */ "./resour
  */
 
 var app = new Vue({
-  el: '#app'
+  el: "#app"
 });
 
 /***/ }),
